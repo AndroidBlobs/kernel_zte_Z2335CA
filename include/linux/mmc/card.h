@@ -395,6 +395,9 @@ struct mmc_card {
 
 #define MMC_QUIRK_QCA9379_SETTINGS (1 << 18)	/* QCA9379 card settings*/
 
+/*Samsung 4+4 need to flush cache before partition swich from RPMB to USER*/
+#define MMC_QUIRK_INAND_FLUSH_CACHE (1 << 15)       /* flush cache before RPMB->USER */
+
 	unsigned int		erase_size;	/* erase size in sectors */
  	unsigned int		erase_shift;	/* if erase unit is power 2 */
  	unsigned int		pref_erase;	/* in sectors */
